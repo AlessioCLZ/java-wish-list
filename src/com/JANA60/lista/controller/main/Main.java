@@ -1,6 +1,7 @@
 package com.JANA60.lista.controller.main;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,6 +37,7 @@ public class Main {
 				{
 					System.out.println("Inserire il proprio desiderio: ");
 					wishList.add(keyboard.nextLine());
+					
 					System.out.println("Lista dei desideri: " +wishList);
 				}
 				break;
@@ -56,6 +58,9 @@ public class Main {
 			System.out.println("Hai raggiunto il limite. La lista non può essere più grande di 10 elementi.");
 			
 		}while(!end);
+		
+		Collections.sort(wishList);
+		System.out.println("La tua lista dei desideri contiene i seguenti elementi: " +wishList);
 		
 		System.out.println("Grazie e arrivederci");
 		
